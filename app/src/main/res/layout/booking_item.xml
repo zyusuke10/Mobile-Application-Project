@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:padding="20dp"
+    android:background="@color/grey">
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/bookingItem"
+        android:layout_width="match_parent"
+        android:layout_height="280dp"
+        android:background="@color/white"
+        android:layout_marginTop="50dp"
+        app:cardCornerRadius="5dp"
+       >
+
+        <TextView
+            android:id="@+id/booking_title"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Performance Name"
+            android:textAlignment="center"
+            android:paddingBottom="20dp"
+            android:paddingTop="20dp"
+            android:textColor="@color/black"
+            android:fontFamily="@font/montserrat"
+            />
+
+        <ImageView
+            android:id="@+id/booking_image"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/grey"
+            android:layout_marginTop="65dp"
+            android:backgroundTint="@color/white"
+            android:paddingBottom="20dp"/>
+
+    </androidx.cardview.widget.CardView>
+
+    <Button
+        android:id="@+id/confirmationBtn"
+        android:layout_width="150dp"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/bookingItem"
+        android:backgroundTint="@color/black"
+        android:textColor="@color/white"
+        android:text="@string/confirmation"
+        android:textSize="10sp"
+        android:layout_marginStart="25dp"
+        android:layout_marginTop="10dp"/>
+
+    <Button
+        android:id="@+id/cancelBtn"
+        android:layout_width="150dp"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/bookingItem"
+        android:text="@string/cancel"
+        android:backgroundTint="@color/red"
+        android:layout_toEndOf="@id/confirmationBtn"
+        android:layout_marginStart="25dp"
+        android:layout_marginTop="10dp"
+        android:textSize="10sp"
+        />
+
+
+</RelativeLayout>

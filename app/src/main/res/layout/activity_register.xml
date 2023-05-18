@@ -1,0 +1,100 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/grey"
+    android:padding="50dp"
+    tools:context=".MainActivity">
+
+    <TextView
+        android:id="@+id/registerText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:fontFamily="@font/montserrat"
+        android:text="Create your account"
+        android:textSize="20sp"
+        tools:layout_editor_absoluteX="51dp"
+        tools:layout_editor_absoluteY="222dp"
+        android:layout_marginTop="80dp"/>
+
+    <EditText
+        android:id="@+id/email"
+        android:layout_width="280dp"
+        android:layout_height="48dp"
+        android:background="@color/white"
+        android:ems="10"
+        android:inputType="textPersonName"
+        android:padding="12dp"
+        android:hint="Email"
+        tools:ignore="MissingConstraints"
+        tools:layout_editor_absoluteX="51dp"
+        tools:layout_editor_absoluteY="281dp"
+        android:layout_marginTop="20dp"
+        android:layout_below="@+id/registerText"/>
+
+    <EditText
+        android:id="@+id/password"
+        android:layout_width="280dp"
+        android:layout_height="48dp"
+        android:background="@color/white"
+        android:ems="10"
+        android:inputType="textPassword"
+        android:hint="Password"
+        android:padding="12dp"
+        tools:ignore="MissingConstraints"
+        tools:layout_editor_absoluteX="51dp"
+        tools:layout_editor_absoluteY="342dp"
+        android:layout_marginTop="15dp"
+        android:layout_below="@+id/email"
+        />
+
+    <EditText
+        android:id="@+id/confirmPassword"
+        android:layout_width="280dp"
+        android:layout_height="48dp"
+        android:background="@color/white"
+        android:hint="Confirm password"
+        android:ems="10"
+        android:inputType="textPassword"
+        android:padding="12dp"
+        tools:ignore="MissingConstraints"
+        tools:layout_editor_absoluteX="51dp"
+        tools:layout_editor_absoluteY="342dp"
+        android:layout_marginTop="15dp"
+        android:layout_below="@+id/password"
+        />
+
+    <Button
+        android:id="@+id/register_btn"
+        android:layout_width="280dp"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/confirmPassword"
+        android:layout_marginTop="30dp"
+        android:backgroundTint="@color/black"
+        android:text="Register"
+        app:cornerRadius="5dp" />
+
+    <TextView
+        android:id="@+id/toLoginText"
+        android:layout_width="220dp"
+        android:layout_marginLeft="60dp"
+        android:layout_height="wrap_content"
+        android:text="Already have an account?"
+        android:layout_marginTop="5dp"
+        android:layout_below="@+id/register_btn"
+        android:gravity="left"/>
+
+    <TextView
+        android:id="@+id/redirectLogin"
+        android:layout_width="270dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="5dp"
+        android:layout_below="@+id/register_btn"
+        android:gravity="right"
+        android:text="Login"
+        android:textColor="@color/blue"/>
+
+
+</RelativeLayout>

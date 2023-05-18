@@ -1,0 +1,134 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/grey"
+    android:gravity="center_horizontal"
+    android:padding="50dp"
+    tools:context=".MainActivity">
+
+    <TextView
+        android:id="@+id/filter_title"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:text="@string/filter_performances"
+        android:fontFamily="@font/montserrat"
+        android:textColor="@color/black"
+        android:textSize="20sp"/>
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/dateInputLayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="@string/dateInput"
+        android:layout_below="@+id/filter_title"
+        android:layout_marginTop="9dp"
+        android:paddingLeft="15dp"
+        android:paddingRight="15dp"
+        app:cornerRadius = "5dp">
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/dateInputEditText"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:inputType="date"
+            android:digits="0123456789/"
+            android:background="@color/white"
+            />
+
+    </com.google.android.material.textfield.TextInputLayout>
+
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/accessibilityInput"
+        android:layout_width="293dp"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/dateInputLayout"
+        android:layout_marginStart="4dp"
+        android:layout_marginTop="4dp"
+        android:layout_marginBottom="4dp"
+        android:hint="@string/accessibility"
+        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox.ExposedDropdownMenu">
+
+        <AutoCompleteTextView
+            android:id="@+id/auto_complete_txt"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/white"
+            android:inputType="none"
+            android:maxLines="1"
+            android:ellipsize="end"
+            app:cornerRadius="5dp"
+            android:layout_marginLeft="11dp"/>
+
+    </com.google.android.material.textfield.TextInputLayout>
+
+
+    <Button
+        android:id="@+id/resetBtn"
+        android:layout_width="115dp"
+        android:layout_height="48dp"
+        android:layout_below="@+id/accessibilityInput"
+        android:layout_marginTop="3dp"
+        android:layout_marginStart="40dp"
+        android:backgroundTint="@color/black"
+        android:text="@string/reset"
+        android:textColor="@color/white"
+        android:textSize="12sp"
+        />
+
+    <Button
+        android:id="@+id/filterBtn"
+        android:layout_width="115dp"
+        android:layout_height="48dp"
+        android:layout_below="@+id/accessibilityInput"
+        android:layout_marginStart="160dp"
+        android:layout_marginTop="3dp"
+        android:backgroundTint="@color/black"
+        android:text="@string/filter"
+        android:textColor="@color/white"
+        android:textSize="12sp"
+        />
+
+    <View
+        android:id="@+id/underline"
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="@android:color/black"
+        android:layout_below="@+id/filterBtn"
+        android:layout_marginTop="20dp"/>
+
+    <GridView
+        android:id="@+id/performanceGridView"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@id/underline"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="15dp"
+        android:horizontalSpacing="8dp"
+        android:numColumns="2"
+        android:verticalSpacing="50dp" />
+
+    <TextView
+        android:id="@+id/noPerformancesTextView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/underline"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="15dp"
+        android:text="@string/no_performances"
+        android:textColor="@color/black"
+        android:textSize="18sp"
+        android:visibility="gone" />
+
+</RelativeLayout>
+
+
+
+
+

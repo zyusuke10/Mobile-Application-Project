@@ -1,0 +1,177 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        tools:context=".PerformanceDetail"
+        android:background="@color/grey"
+        android:padding="20dp">
+
+    <TextView
+        android:id="@+id/title_p"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true"
+        android:layout_marginStart="2dp"
+        android:layout_marginTop="18dp"
+        android:fontFamily="@font/montserrat"
+        android:textAlignment="center"
+        android:textColor="#000000"
+        android:textSize="20sp" />
+
+    <ImageView
+        android:id="@+id/imageView"
+        android:layout_width="match_parent"
+        android:layout_height="204dp"
+        android:layout_marginTop="20dp"
+        android:scaleType="fitCenter"
+        android:layout_below="@+id/title_p"
+        tools:srcCompat="@tools:sample/backgrounds/scenic" />
+
+    <ImageView
+        android:id="@+id/imageView2"
+        android:layout_width="37dp"
+        android:layout_height="41dp"
+        android:layout_marginStart="49dp"
+        android:layout_marginTop="30dp"
+        android:layout_below="@id/imageView"
+        app:srcCompat="@android:drawable/ic_menu_directions" />
+
+    <ImageView
+        android:id="@+id/imageView4"
+        android:layout_width="37dp"
+        android:layout_height="41dp"
+        android:layout_below="@+id/imageView2"
+        android:layout_marginStart="49dp"
+        android:layout_marginTop="30dp"
+        app:srcCompat="@android:drawable/ic_lock_idle_alarm" />
+
+    <ImageView
+        android:id="@+id/imageView5"
+        android:layout_width="37dp"
+        android:layout_height="41dp"
+        android:layout_marginStart="49dp"
+        android:layout_below="@+id/imageView4"
+        android:layout_marginTop="30dp"
+        app:srcCompat="@android:drawable/presence_online" />
+
+    <ImageView
+        android:id="@+id/imageView6"
+        android:layout_width="37dp"
+        android:layout_height="41dp"
+        android:layout_below="@+id/imageView5"
+        android:layout_marginTop="30dp"
+        android:layout_marginStart="49dp"
+        app:srcCompat="@android:drawable/ic_dialog_info" />
+
+    <TextView
+        android:id="@+id/location"
+        android:layout_width="237dp"
+        android:layout_height="57dp"
+        android:layout_alignParentStart="true"
+        android:layout_centerVertical="true"
+        android:layout_marginStart="118dp"
+        android:layout_toEndOf="@+id/imageView2"
+        android:layout_below="@id/imageView"
+        android:textColor="#000000"
+        android:textSize="20sp"
+        android:layout_marginTop="30dp"/>
+
+    <TextView
+        android:id="@+id/time"
+        android:layout_width="237dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="118dp"
+        android:layout_below="@+id/location"
+        android:layout_marginTop="20dp"
+        android:textColor="#000000"
+        android:textSize="20sp" />
+
+        <TextView
+            android:id="@+id/price"
+            android:layout_width="wrap_content"
+            android:layout_height="38dp"
+            android:layout_below="@id/time"
+            android:layout_marginTop="45dp"
+            android:layout_marginStart="118dp"
+            android:textColor="#000000"
+            android:textSize="20sp" />
+
+        <TextView
+            android:id="@+id/ticket_qty"
+            android:layout_width="237dp"
+            android:layout_height="38dp"
+            android:layout_marginStart="158dp"
+            android:layout_below="@id/time"
+            android:layout_marginTop="45dp"
+            android:textColor="#E41000"
+            android:textSize="20sp" />
+
+    <TextView
+        android:id="@+id/accessibility"
+        android:layout_width="237dp"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/price"
+        android:layout_marginTop="30dp"
+        android:layout_marginStart="118dp"
+        android:textColor="#000000"
+        android:textSize="20sp" />
+
+        <View
+            android:id="@+id/underline"
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:background="@android:color/black"
+            android:layout_below="@+id/accessibility"
+            android:layout_marginTop="50dp"/>
+
+        <TextView
+            android:id="@+id/quantityLabel"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Select Ticket Quantity:"
+            android:layout_centerHorizontal="true"
+            android:textStyle="bold"
+            android:layout_below="@id/underline"
+            android:layout_marginTop="40dp"/>
+
+        <Spinner
+            android:id="@+id/quantitySpinner"
+            android:layout_width="wrap_content"
+            android:layout_height="48dp"
+            android:layout_below="@id/underline"
+            android:layout_marginTop="70dp"
+            android:layout_centerHorizontal="true"
+            android:entries="@array/quantity_values"
+            android:prompt="@string/quantity_prompt" />
+
+
+
+        <androidx.cardview.widget.CardView
+            android:layout_width="200dp"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:layout_below="@+id/quantitySpinner"
+            app:cardCornerRadius="5dp"
+            android:layout_marginTop="30dp"
+            android:backgroundTint="@color/black">
+
+    <Button
+        android:id="@+id/bookBtn"
+        android:layout_width="200dp"
+        android:layout_height="wrap_content"
+        android:backgroundTint="@color/black"
+        android:textColor="@color/white"
+        android:text="@string/book_now"
+        />
+        </androidx.cardview.widget.CardView>
+
+</RelativeLayout>
+</ScrollView>
